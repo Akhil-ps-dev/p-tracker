@@ -8,8 +8,6 @@ import 'package:flutter_period/screens/01home.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
-
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -27,6 +25,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
+        backgroundColor: Colors.pink.shade200,
         index: selectedIndex,
         items: [
           Icon(
