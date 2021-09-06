@@ -1,19 +1,73 @@
+//@dart=2.9
 import 'package:flutter/material.dart';
+import 'package:flutter_period/screens/widget/button_widget.dart';
+import 'package:intl/intl.dart';
 
-class CalendarScreen extends StatefulWidget {
-  CalendarScreen({Key? key}) : super(key: key);
-
+class DateRangePickerWidget extends StatefulWidget {
   @override
-  _CalendarScreenState createState() => _CalendarScreenState();
+  _DateRangePickerWidgetState createState() => _DateRangePickerWidgetState();
 }
 
-class _CalendarScreenState extends State<CalendarScreen> {
+class _DateRangePickerWidgetState extends State<DateRangePickerWidget> {
+  DateTimeRange dateRange;
+
+  String getFrom() {
+    if (dateRange == null) {
+      return 'From';
+    } else {
+      return DateFormat('MM/dd/yyyy').format(dateRange.start);
+    }
+  }
+
+  String getUntil() {
+    if (dateRange == null) {
+      return 'Until';
+    } else {
+      return DateFormat('MM/dd/yyyy').format(dateRange.end);
+    }
+  }
+
   @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        title: Text("Calnedar"),
-      ),
+  Widget build(BuildContext context) => HeaderWidget(
+        title: 'Date Range',
+        child: Center(
+          heightFactor: 10,
+          child: Row(
+            children: [
+              Expanded(
+                child: ButtonWidget(
+                  text: getFrom(),
+                  onClicked: () => pickDateRange(context),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Icon(Icons.arrow_forward, color: Colors.black),
+              const SizedBox(width: 8),
+              Expanded(
+                child: ButtonWidget(
+                  text: getUntil(),
+                  onClicked: () => pickDateRange(context),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+
+  Future pickDateRange(BuildContext context) async {
+    final initialDateRange = DateTimeRange(
+      start: DateTime.now(),
+      end: DateTime.now().add(Duration(hours: 24 * 3)),
     );
+    final newDateRange = await showDateRangePicker(
+      context: context,
+      firstDate: DateTime(DateTime.now().year - 5),
+      lastDate: DateTime(DateTime.now().year + 5),
+      initialDateRange: dateRange ?? initialDateRange,
+    );
+
+    if (newDateRange == null) return;
+
+    setState(() => dateRange = newDateRange);
   }
 }

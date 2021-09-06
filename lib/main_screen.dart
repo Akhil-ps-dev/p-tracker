@@ -17,7 +17,7 @@ class _MainScreenState extends State<MainScreen> {
   final screen = [
     HomeScreen(),
     InformationScreen(),
-    CalendarScreen(),
+    DateRangePickerWidget(),
     NoteScreen(),
     ExerciseScreen(),
   ];

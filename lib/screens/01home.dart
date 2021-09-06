@@ -165,54 +165,7 @@ class BannerWidget extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => CalendarScreen()),
-                  );
-                },
-                child: Container(
-                  width: 150,
-                  margin: EdgeInsets.only(right: 20),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 10.0,
-                            offset: Offset(0.0, 10.0))
-                      ],
-                      color: Colors.pink.shade200,
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "Calnedar\nand\nreminder",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "lato"),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            FontAwesomeIcons.smileWink,
-                            size: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => CalendarScreen()),
+                    MaterialPageRoute(builder: (context) => DateRangePickerWidget()),
                   );
                 },
                 child: Container(
