@@ -26,6 +26,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_settings_screens: ^0.2.2+1
+
   font_awesome_flutter: ^9.1.0
   intl: ^0.17.0
 

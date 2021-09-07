@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                BannerWidget()
+                //! BannerWidget()
               ],
             ),
           ),
@@ -46,169 +46,168 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-class BannerWidget extends StatelessWidget {
-  
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics: BouncingScrollPhysics(),
-      scrollDirection: Axis.horizontal,
-      child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
-        child: FittedBox(
-          fit: BoxFit.fill,
-          alignment: Alignment.topCenter,
-          child: Row(
-            children: <Widget>[
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SettingsPage(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 150,
-                  margin: EdgeInsets.only(right: 20),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 10.0,
-                            offset: Offset(0.0, 10.0))
-                      ],
-                      color: Colors.pink.shade200,
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "Exercise\nand\nmusic",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "lato"),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            FontAwesomeIcons.headphones,
-                            size: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => NoteScreen(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: 150,
-                  margin: EdgeInsets.only(right: 20),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 10.0,
-                            offset: Offset(0.0, 10.0))
-                      ],
-                      color: Colors.pink.shade200,
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "Write your\nfeelings\non Diary",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "lato"),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            FontAwesomeIcons.book,
-                            size: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              // InkWell(
-              //   onTap: () {
-              //     Navigator.push(
-              //       context,
-              //       MaterialPageRoute(builder: (context) => DateRangePickerWidget()),
-              //     );
-              //   },
-              //   child: Container(
-              //     width: 150,
-              //     margin: EdgeInsets.only(right: 20),
-              //     decoration: BoxDecoration(
-              //         boxShadow: [
-              //           BoxShadow(
-              //               color: Colors.grey,
-              //               blurRadius: 10.0,
-              //               offset: Offset(0.0, 10.0))
-              //         ],
-              //         color: Colors.pink.shade200,
-              //         borderRadius: BorderRadius.all(Radius.circular(20.0))),
-              //     child: Padding(
-              //       padding: const EdgeInsets.all(12.0),
-              //       child: Column(
-              //         crossAxisAlignment: CrossAxisAlignment.start,
-              //         children: <Widget>[
-              //           Text(
-              //             "Calnedar\nand\nreminder",
-              //             style: TextStyle(
-              //                 fontSize: 25,
-              //                 color: Colors.white,
-              //                 fontWeight: FontWeight.bold,
-              //                 fontFamily: "lato"),
-              //           ),
-              //           SizedBox(
-              //             height: 10,
-              //           ),
-              //           IconButton(
-              //             onPressed: () {},
-              //             icon: Icon(
-              //               FontAwesomeIcons.smileWink,
-              //               size: 25,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ),
-              // ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+// class BannerWidget extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return SingleChildScrollView(
+//       physics: BouncingScrollPhysics(),
+//       scrollDirection: Axis.horizontal,
+//       child: Container(
+//         margin: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+//         child: FittedBox(
+//           fit: BoxFit.fill,
+//           alignment: Alignment.topCenter,
+//           child: Row(
+//             children: <Widget>[
+//               // InkWell(
+//               //   onTap: () {
+//               //     Navigator.push(
+//               //       context,
+//               //       MaterialPageRoute(
+//               //         builder: (context) => SettingsPage(),
+//               //       ),
+//               //     );
+//               //   },
+//               //   child: Container(
+//               //     width: 150,
+//               //     margin: EdgeInsets.only(right: 20),
+//               //     decoration: BoxDecoration(
+//               //         boxShadow: [
+//               //           BoxShadow(
+//               //               color: Colors.grey,
+//               //               blurRadius: 10.0,
+//               //               offset: Offset(0.0, 10.0))
+//               //         ],
+//               //         color: Colors.pink.shade200,
+//               //         borderRadius: BorderRadius.all(Radius.circular(20.0))),
+//               //     child: Padding(
+//               //       padding: const EdgeInsets.all(12.0),
+//               //       child: Column(
+//               //         crossAxisAlignment: CrossAxisAlignment.start,
+//               //         children: <Widget>[
+//               //           Text(
+//               //             "Exercise\nand\nmusic",
+//               //             style: TextStyle(
+//               //                 fontSize: 25,
+//               //                 color: Colors.white,
+//               //                 fontWeight: FontWeight.bold,
+//               //                 fontFamily: "lato"),
+//               //           ),
+//               //           SizedBox(
+//               //             height: 10,
+//               //           ),
+//               //           IconButton(
+//               //             onPressed: () {},
+//               //             icon: Icon(
+//               //               FontAwesomeIcons.headphones,
+//               //               size: 25,
+//               //             ),
+//               //           ),
+//               //         ],
+//               //       ),
+//               //     ),
+//               //   ),
+//               // ),
+//               // InkWell(
+//               //   onTap: () {
+//               //     Navigator.push(
+//               //       context,
+//               //       MaterialPageRoute(
+//               //         builder: (context) => NoteScreen(),
+//               //       ),
+//               //     );
+//               //   },
+//               //   child: Container(
+//               //     width: 150,
+//               //     margin: EdgeInsets.only(right: 20),
+//               //     decoration: BoxDecoration(
+//               //         boxShadow: [
+//               //           BoxShadow(
+//               //               color: Colors.grey,
+//               //               blurRadius: 10.0,
+//               //               offset: Offset(0.0, 10.0))
+//               //         ],
+//               //         color: Colors.pink.shade200,
+//               //         borderRadius: BorderRadius.all(Radius.circular(20.0))),
+//               //     child: Padding(
+//               //       padding: const EdgeInsets.all(12.0),
+//               //       child: Column(
+//               //         crossAxisAlignment: CrossAxisAlignment.start,
+//               //         children: <Widget>[
+//               //           Text(
+//               //             "Write your\nfeelings\non Diary",
+//               //             style: TextStyle(
+//               //                 fontSize: 25,
+//               //                 color: Colors.white,
+//               //                 fontWeight: FontWeight.bold,
+//               //                 fontFamily: "lato"),
+//               //           ),
+//               //           SizedBox(
+//               //             height: 10,
+//               //           ),
+//               //           IconButton(
+//               //             onPressed: () {},
+//               //             icon: Icon(
+//               //               FontAwesomeIcons.book,
+//               //               size: 25,
+//               //             ),
+//               //           ),
+//               //         ],
+//               //       ),
+//               //     ),
+//               //   ),
+//               // ),
+//               // InkWell(
+//               //   onTap: () {
+//               //     Navigator.push(
+//               //       context,
+//               //       MaterialPageRoute(builder: (context) => DateRangePickerWidget()),
+//               //     );
+//               //   },
+//               //   child: Container(
+//               //     width: 150,
+//               //     margin: EdgeInsets.only(right: 20),
+//               //     decoration: BoxDecoration(
+//               //         boxShadow: [
+//               //           BoxShadow(
+//               //               color: Colors.grey,
+//               //               blurRadius: 10.0,
+//               //               offset: Offset(0.0, 10.0))
+//               //         ],
+//               //         color: Colors.pink.shade200,
+//               //         borderRadius: BorderRadius.all(Radius.circular(20.0))),
+//               //     child: Padding(
+//               //       padding: const EdgeInsets.all(12.0),
+//               //       child: Column(
+//               //         crossAxisAlignment: CrossAxisAlignment.start,
+//               //         children: <Widget>[
+//               //           Text(
+//               //             "Calnedar\nand\nreminder",
+//               //             style: TextStyle(
+//               //                 fontSize: 25,
+//               //                 color: Colors.white,
+//               //                 fontWeight: FontWeight.bold,
+//               //                 fontFamily: "lato"),
+//               //           ),
+//               //           SizedBox(
+//               //             height: 10,
+//               //           ),
+//               //           IconButton(
+//               //             onPressed: () {},
+//               //             icon: Icon(
+//               //               FontAwesomeIcons.smileWink,
+//               //               size: 25,
+//               //             ),
+//               //           ),
+//               //         ],
+//               //       ),
+//               //     ),
+//               //   ),
+//               // ),
+//             ],
+//           ),
+//         ),
+//       ),
+//     );
+//   }
+// }

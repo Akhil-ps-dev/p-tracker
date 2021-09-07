@@ -7,13 +7,22 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  static final ValueNotifier<ThemeMode> themeNotifier =
+      ValueNotifier(ThemeMode.light);
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      home: MainScreen(),
-    );
+    return ValueListenableBuilder<ThemeMode>(
+        valueListenable: themeNotifier,
+        builder: (_, ThemeMode currentMode, __) {
+          return MaterialApp(
+            // Remove the debug banner
+            debugShowCheckedModeBanner: false,
+            title: 'Kindacode.com',
+            theme: ThemeData(primarySwatch: Colors.pink),
+            darkTheme: ThemeData.dark(),
+            themeMode: currentMode,
+            home: MainScreen(),
+          );
+        });
   }
 }

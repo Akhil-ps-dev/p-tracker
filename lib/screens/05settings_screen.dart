@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_period/05_settings_file/01_account_page.dart';
 import 'package:flutter_period/05_settings_file/01icon_widget.dart';
+import 'package:flutter_period/main.dart';
 import 'package:flutter_settings_screens/flutter_settings_screens.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -13,7 +14,21 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-    
+        appBar: AppBar(
+          title: Text('Settings screen'),
+          actions: [
+            IconButton(
+                icon: Icon(MyApp.themeNotifier.value == ThemeMode.light
+                    ? Icons.dark_mode
+                    : Icons.light_mode),
+                onPressed: () {
+                  MyApp.themeNotifier.value =
+                      MyApp.themeNotifier.value == ThemeMode.light
+                          ? ThemeMode.dark
+                          : ThemeMode.light;
+                })
+          ],
+        ),
         body: SafeArea(
           child: ListView(
             padding: EdgeInsets.all(24),

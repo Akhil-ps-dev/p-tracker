@@ -27,27 +27,33 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.pink.shade200,
+        color: Colors.pink.shade200,
+        backgroundColor: Colors.white,
         index: selectedIndex,
         items: [
           Icon(
             FontAwesomeIcons.home,
+            color: Colors.white,
             size: 25,
           ),
           Icon(
             FontAwesomeIcons.list,
+            color: Colors.white,
             size: 25,
           ),
           Icon(
             FontAwesomeIcons.calendarAlt,
+            color: Colors.white,
             size: 25,
           ),
           Icon(
             FontAwesomeIcons.solidStickyNote,
+            color: Colors.white,
             size: 25,
           ),
           Icon(
             Icons.settings,
+            color: Colors.white,
             size: 25,
           ),
         ],
