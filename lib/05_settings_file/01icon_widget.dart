@@ -7,16 +7,17 @@ class IconWidgets extends StatelessWidget {
 
   const IconWidgets({Key key, this.icon, this.color}) : super(key: key);
 
-
   @override
-  Widget build(BuildContext context) =>
-      Container(
-        padding: EdgeInsets.all(6),
+  Widget build(BuildContext context) => Container(
+    
+        padding: EdgeInsets.all(7),
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: color,
         ),
-        child: Icon(icon, color: Colors.white,),
+        child: Icon(
+          icon,
+          color: Colors.white,
+        ),
       );
-
 }

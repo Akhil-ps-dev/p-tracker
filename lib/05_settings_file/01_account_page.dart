@@ -8,7 +8,7 @@ class AccountPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SimpleSettingsTile(
         title: 'Account Settings',
-        subtitle: 'Privacy, Security, Language',
+        subtitle: 'Privacy, Security',
         leading: IconWidgets(
           icon: Icons.person,
           color: Colors.greenAccent,

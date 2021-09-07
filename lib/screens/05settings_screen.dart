@@ -13,6 +13,7 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
+    
         body: SafeArea(
           child: ListView(
             padding: EdgeInsets.all(24),
@@ -20,19 +21,36 @@ class _SettingsPageState extends State<SettingsPage> {
               SettingsGroup(
                 title: 'General',
                 children: <Widget>[
+                  const SizedBox(
+                    height: 30,
+                  ),
                   AccountPage(),
                   // NotificationPage(),
-                  buildLogout(),
-                  buildDeleteAccount(),
+                  buildNotification(),
                 ],
               ),
               const SizedBox(height: 32),
               SettingsGroup(
                 title: "FeedBack",
                 children: <Widget>[
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 30),
                   buildReportBug(context),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   buildSendFeedback(context),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  buildShare(context),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  buildHelp(context),
+                  const SizedBox(
+                    height: 140,
+                  ),
+                  buildLogout(),
                 ],
               ),
             ],
@@ -40,40 +58,60 @@ class _SettingsPageState extends State<SettingsPage> {
         ),
       );
 
+  Widget buildNotification() => SimpleSettingsTile(
+        title: 'Notifications',
+        subtitle: '',
+        leading: IconWidgets(
+          icon: Icons.message,
+          color: Colors.red,
+        ),
+        onTap: () {},
+      );
+
+  Widget buildReportBug(BuildContext context) => SimpleSettingsTile(
+        title: 'Report a Bug',
+        subtitle: '',
+        leading: IconWidgets(
+          icon: Icons.bug_report,
+          color: Colors.redAccent,
+        ),
+        onTap: () {},
+      );
+
+  Widget buildSendFeedback(BuildContext context) => SimpleSettingsTile(
+        title: 'Send Feedback',
+        subtitle: '',
+        leading: IconWidgets(
+          icon: Icons.star,
+          color: Colors.purple,
+        ),
+        onTap: () {},
+      );
+
+  Widget buildShare(BuildContext context) => SimpleSettingsTile(
+        title: 'Share App',
+        subtitle: '',
+        leading: IconWidgets(
+          icon: Icons.share,
+          color: Colors.pink,
+        ),
+        onTap: () {},
+      );
+
+  Widget buildHelp(BuildContext context) => SimpleSettingsTile(
+        title: 'Help',
+        subtitle: '',
+        leading: IconWidgets(
+          icon: Icons.help,
+          color: Colors.pink,
+        ),
+        onTap: () {},
+      );
+
   Widget buildLogout() => SimpleSettingsTile(
         title: 'Logout',
         subtitle: '',
         leading: IconWidgets(icon: Icons.logout, color: Colors.blueAccent),
-    onTap: () {},
+        onTap: () {},
       );
-
-  Widget buildDeleteAccount() => SimpleSettingsTile(
-        title: 'Delete Account',
-        subtitle: '',
-        leading: IconWidgets(
-          icon: Icons.delete,
-          color: Colors.red,
-        ),
-    onTap: () {},
-      );
-
-  Widget buildReportBug(BuildContext context) => SimpleSettingsTile(
-    title: 'Report a Bug',
-    subtitle: '',
-    leading: IconWidgets(
-      icon: Icons.bug_report,
-      color: Colors.redAccent,
-    ),
-    onTap: () {},
-  );
-
-  Widget buildSendFeedback(BuildContext context) => SimpleSettingsTile(
-    title: 'Send Feedback',
-    subtitle: '',
-    leading: IconWidgets(
-      icon: Icons.star,
-      color: Colors.purple,
-    ),
-    onTap: () {},
-  );
 }
