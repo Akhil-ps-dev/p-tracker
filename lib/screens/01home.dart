@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_period/screens/03calender_screen.dart';
 import 'package:flutter_period/screens/04note_screen.dart';
-import 'package:flutter_period/screens/05exercise_screen.dart';
+import 'package:flutter_period/screens/05settings_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -68,7 +67,7 @@ class BannerWidget extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ExerciseScreen(),
+                      builder: (context) => SettingsPage(),
                     ),
                   );
                 },
@@ -161,53 +160,53 @@ class BannerWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => DateRangePickerWidget()),
-                  );
-                },
-                child: Container(
-                  width: 150,
-                  margin: EdgeInsets.only(right: 20),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey,
-                            blurRadius: 10.0,
-                            offset: Offset(0.0, 10.0))
-                      ],
-                      color: Colors.pink.shade200,
-                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          "Calnedar\nand\nreminder",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: "lato"),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        IconButton(
-                          onPressed: () {},
-                          icon: Icon(
-                            FontAwesomeIcons.smileWink,
-                            size: 25,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // InkWell(
+              //   onTap: () {
+              //     Navigator.push(
+              //       context,
+              //       MaterialPageRoute(builder: (context) => DateRangePickerWidget()),
+              //     );
+              //   },
+              //   child: Container(
+              //     width: 150,
+              //     margin: EdgeInsets.only(right: 20),
+              //     decoration: BoxDecoration(
+              //         boxShadow: [
+              //           BoxShadow(
+              //               color: Colors.grey,
+              //               blurRadius: 10.0,
+              //               offset: Offset(0.0, 10.0))
+              //         ],
+              //         color: Colors.pink.shade200,
+              //         borderRadius: BorderRadius.all(Radius.circular(20.0))),
+              //     child: Padding(
+              //       padding: const EdgeInsets.all(12.0),
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: <Widget>[
+              //           Text(
+              //             "Calnedar\nand\nreminder",
+              //             style: TextStyle(
+              //                 fontSize: 25,
+              //                 color: Colors.white,
+              //                 fontWeight: FontWeight.bold,
+              //                 fontFamily: "lato"),
+              //           ),
+              //           SizedBox(
+              //             height: 10,
+              //           ),
+              //           IconButton(
+              //             onPressed: () {},
+              //             icon: Icon(
+              //               FontAwesomeIcons.smileWink,
+              //               size: 25,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),

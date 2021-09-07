@@ -29,7 +29,7 @@ class _DateRangePickerWidgetState extends State<DateRangePickerWidget> {
 
   @override
   Widget build(BuildContext context) => HeaderWidget(
-        title: 'Date Range',
+        title: '',
         child: Center(
           heightFactor: 10,
           child: Row(

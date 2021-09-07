@@ -2,8 +2,9 @@ import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_period/screens/02Info_screen.dart';
 import 'package:flutter_period/screens/03calender_screen.dart';
+
 import 'package:flutter_period/screens/04note_screen.dart';
-import 'package:flutter_period/screens/05exercise_screen.dart';
+import 'package:flutter_period/screens/05settings_screen.dart';
 import 'package:flutter_period/screens/01home.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -19,7 +20,7 @@ class _MainScreenState extends State<MainScreen> {
     InformationScreen(),
     DateRangePickerWidget(),
     NoteScreen(),
-    ExerciseScreen(),
+    SettingsPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -45,7 +46,7 @@ class _MainScreenState extends State<MainScreen> {
             size: 25,
           ),
           Icon(
-            FontAwesomeIcons.music,
+            Icons.settings,
             size: 25,
           ),
         ],
