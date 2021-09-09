@@ -1,8 +1,5 @@
 //@dart=2.9
 import 'package:flutter/material.dart';
-import 'package:flutter_period/screens/04note_screen.dart';
-import 'package:flutter_period/screens/05settings_screen.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

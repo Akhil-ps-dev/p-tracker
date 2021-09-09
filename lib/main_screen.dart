@@ -27,7 +27,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.pink.shade200,
+        color: Colors.pink,
         backgroundColor: Colors.white,
         index: selectedIndex,
         items: [

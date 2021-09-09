@@ -15,9 +15,15 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text('Settings screen'),
+          title: Text(
+            'Settings ',
+            style: TextStyle(fontFamily: "lato"),
+          ),
+          centerTitle: true,
           actions: [
-            IconButton(
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: IconButton(
                 icon: Icon(MyApp.themeNotifier.value == ThemeMode.light
                     ? Icons.dark_mode
                     : Icons.light_mode),
@@ -26,7 +32,9 @@ class _SettingsPageState extends State<SettingsPage> {
                       MyApp.themeNotifier.value == ThemeMode.light
                           ? ThemeMode.dark
                           : ThemeMode.light;
-                })
+                },
+              ),
+            ),
           ],
         ),
         body: SafeArea(
@@ -63,7 +71,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   ),
                   buildHelp(context),
                   const SizedBox(
-                    height: 140,
+                    height: 20,
                   ),
                   buildLogout(),
                 ],

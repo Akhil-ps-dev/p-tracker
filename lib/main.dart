@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             // Remove the debug banner
             debugShowCheckedModeBanner: false,
-            title: 'Kindacode.com',
+            title: 'period tracker',
             theme: ThemeData(primarySwatch: Colors.pink),
             darkTheme: ThemeData.dark(),
             themeMode: currentMode,
