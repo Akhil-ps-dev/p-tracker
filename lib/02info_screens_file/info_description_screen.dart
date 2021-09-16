@@ -9,7 +9,13 @@ class InfoDescriptionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        elevation: 0,
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(40),
+                bottomRight: Radius.circular(40))),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: SingleChildScrollView(
@@ -19,6 +25,10 @@ class InfoDescriptionScreen extends StatelessWidget {
               Image.network(
                 info.imageUrl,
                 height: 220,
+              ),
+              Divider(
+                height: 20,
+                color: Colors.grey,
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -32,11 +42,11 @@ class InfoDescriptionScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(10.0),
                 child: Text(
                   info.description,
                   textAlign: TextAlign.justify,
-                  style: TextStyle(fontSize: 22.0, fontFamily: "lato"),
+                  style: TextStyle(fontSize: 20.0, fontFamily: "lato"),
                 ),
               )
             ],

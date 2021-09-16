@@ -20,6 +20,10 @@ class _SettingsPageState extends State<SettingsPage> {
             style: TextStyle(fontFamily: "lato"),
           ),
           centerTitle: true,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(40),
+                  bottomRight: Radius.circular(40))),
           actions: [
             Padding(
               padding: const EdgeInsets.all(8.0),
